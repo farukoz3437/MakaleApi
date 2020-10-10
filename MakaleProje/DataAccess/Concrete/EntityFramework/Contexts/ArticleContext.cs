@@ -11,7 +11,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString:@"Server=..........");
+            optionsBuilder.UseSqlServer(connectionString: @"Data Source=LAPTOP-Q5KQP3V5\SQLEXPRESS;Initial Catalog=ArticleDb;Integrated Security=True");
         }
 
         public DbSet<Article> Articles { get; set; }

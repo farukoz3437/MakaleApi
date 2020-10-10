@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
 using Entities;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +12,10 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthorController : ControllerBase
+    public class AuthorsController : ControllerBase
     {
         private IAuthorService _authorService;
-        public AuthorController(IAuthorService authorService)
+        public AuthorsController(IAuthorService authorService)
         {
             _authorService = authorService;
         }
@@ -22,6 +23,7 @@ namespace WebAPI.Controllers
         [HttpGet(template: "getall")]
         public IActionResult GetList()
         {
+           
             try
             {
                 return Ok(_authorService.GetList());

@@ -11,20 +11,20 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ArticleController : ControllerBase
+    public class ArticlesController : ControllerBase
     {
         private IArticleService _articleService;
-        public ArticleController(IArticleService articleService)
+        public ArticlesController(IArticleService articleService)
         {
             _articleService = articleService;
         }
 
-        [HttpGet(template:"getall")]
+        [HttpGet(template: "getall")]
         public IActionResult GetList()
         {
             try
             {
-                return Ok( _articleService.GetList());
+                return Ok(_articleService.GetList());
             }
             catch (Exception)
             {
