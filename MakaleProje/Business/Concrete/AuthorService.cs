@@ -17,19 +17,23 @@ namespace Business.Concrete
         {
             _authorDal = authorDal;
         }
-        public void Add(Author author)
+        public string Add(Author author)
         {
             _authorDal.Add(author);
+            return "Yazar başarıyla eklendi";
+            
         }
 
-        public void Delete(Author author)
+        public string Delete(Author author)
         {
             _authorDal.Delete(author);
+            return "Yazar başarıyla silindi";
         }
 
-        public void Update(Author author)
+        public string Update(Author author)
         {
             _authorDal.Update(author);
+            return "Yazar başarıyla güncellendi";
         }
 
         public Author GetById(int authorId)

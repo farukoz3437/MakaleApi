@@ -17,19 +17,22 @@ namespace Business.Concrete
             _IArticleDal = articleDal;
         }
 
-        public void Add(Article article)
+        public string Add(Article article)
         {
             _IArticleDal.Add(article);
+            return "Makale başarıyla eklendi";
         }
 
-        public void Delete(Article article)
+        public string Delete(Article article)
         {
             _IArticleDal.Delete(article);
+            return "Makale başarıyla silindi";
         }
 
-        public void Update(Article article)
+        public string Update(Article article)
         {
             _IArticleDal.Update(article);
+            return "Makale başarıyla güncellendi";
         }
 
         public Article GetById(int articleId)

@@ -10,8 +10,8 @@ namespace Business.Abstract
         Article GetById(int articleId);
         List<Article> GetList();
         List<Article> GetListByArticleId(int articleId);
-        void Add(Article article);
-        void Delete(Article article);
-        void Update(Article article);
+        string Add(Article article);
+        string Delete(Article article);
+        string Update(Article article);
     }
 }
